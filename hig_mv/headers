@@ -1,0 +1,63 @@
+#!/bin/sh
+#BHEADER**********************************************************************
+#* 
+#* XHYPRE 2020.10.29
+#*
+#* autor: Chuanying Li
+#*
+#EHEADER**********************************************************************
+
+
+
+
+
+
+
+
+INTERNAL_HEADER=hig_mv.h
+
+#===========================================================================
+# Include guards and other includes
+#===========================================================================
+
+cat > $INTERNAL_HEADER <<@
+
+#include <HYPRE_config.h>
+
+#include "seq_mv.h"
+#include "_hypre_struct_mv.h"
+#include "protos.h"
+
+#ifndef hypre_HIG_MV_HEADER
+#define hypre_HIG_MV_HEADER
+
+#include "_hypre_utilities.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+@
+
+#===========================================================================
+# Structures and prototypes
+#===========================================================================
+
+cat hig_mv.h          >> $INTERNAL_HEADER		
+
+../utilities/protos *.c               >> $INTERNAL_HEADER
+
+#===========================================================================
+# Include guards
+#===========================================================================
+
+cat >> $INTERNAL_HEADER <<@
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+@
+
