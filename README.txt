@@ -7,18 +7,18 @@
  ***********************************************************************EHEADER*/
 
 
-此tar包依赖于hypre库。
+This tar package depends on the hypre library.
 
-hypre库版本：hypre-2.11.2
+hypre version：hypre-2.11.2
 
-作用为：将原始hypre库转换为高精度hypre库。
+Function: Convert the original hypre library into a high-precision hypre library.
 
-使用步骤：
-首先将此tar包与hypre-2.11.2.tar.gz上传至同一文件夹下；
-然后分别解压缩；
-进入解压缩后的hig_hypre文件夹，运行脚本hig_hypre.sh，运行语句为：
+Steps for usage:
+First, upload the tar package and hypre-2.11.2.tar.gz to the same folder;
+Then decompress them separately;
+Enter the decompressed hig_hypre folder, run the script hig_hypre.sh, the running statement is:
                  chmod +x hig_hypre.sh
                  ./hig_hypre.sh
-此时原始hypre就变成了高精度的hypre库。
+At this time, the original hypre becomes a high-precision hypre library.
 
-按照原始hypre库编译运行的方式使用即可。
+Finally, you can use it in the way of compiling and running the original hypre library.
